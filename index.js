@@ -9,7 +9,7 @@ const PORT = 3000;
 console.log("port: " + process.env.PORT);
 
 server.listen(PORT, () => {
-  console.log("Server listening......");
+  console.log("Server listening.......");
 });
 
 server.get('/', (req, res) => {
