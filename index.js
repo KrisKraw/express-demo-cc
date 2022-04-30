@@ -4,12 +4,9 @@ const { Server } = require("http");
 
 const server = express();
 
-const PORT = 3000;
-
-console.log("port: " + process.env.PORT);
-
-server.listen(PORT, () => {
-  console.log("Server listening.......");
+var listener = server.listen(process.env.PORT || 3000, () => {
+  const PORT = listener.address().port;
+  console.log(`Server listening on port: ${PORT}`);
 });
 
 server.get('/', (req, res) => {
